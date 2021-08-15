@@ -1,1 +1,1 @@
-web: gunicorn config.wsgi --log-file -
+web: gunicorn homelane_covid_19_3rd_wave_prev.wsgi --log-file -
