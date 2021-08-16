@@ -20,12 +20,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-# SECRET_KEY = 'django-insecure-xl#2u&fc*o4lqv3_il+mxjgx1_0_tc00$=ygko32evi+%7u1k#'
+SECRET_KEY = 'django-insecure-xl#2u&fc*o4lqv3_il+mxjgx1_0_tc00$=ygko32evi+%7u1k#'
 
-SECRET_KEY = "23abcd87b12446653f7f3e935023848efc7e96979ca13489"
+# SECRET_KEY = "23abcd87b12446653f7f3e935023848efc7e96979ca13489"
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -127,4 +127,4 @@ STATIC_URL = '/static/'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')

@@ -1,4 +1,4 @@
-This project has done as a part of **HomeLane Backend Hiring Challenge** on HackeEarth
+This project has done as a part of **HomeLane Backend Hiring Challenge** on HackerEarth
 
 
 The application is developed by using Django Framework
@@ -13,7 +13,7 @@ python3.8 manage.py runserver
 ```
 
 
-The search fields are taken as path pathparameters
+The search fields are taken as path parameters
 The localhost Urls
 ```
 http://localhost:8080/core/get-pinpoint-state/Bihar/2021-8-14/
@@ -58,8 +58,8 @@ The Project tree is as given below
 
 Tasks Completed
 
-Data Populated in SQLite
-Written 3 Query service APIs
-Deployed to Heroku
-Performed UnitTesting
+- Data Populated in SQLite
+- Written 3 Query service APIs
+- Deployed to Heroku
+- Performed UnitTesting
 

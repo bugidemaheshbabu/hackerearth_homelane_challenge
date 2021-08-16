@@ -10,11 +10,14 @@ from datetime import datetime
 class StateWiseCovidDetails(models.Model):
     date = models.DateTimeField()
     state = models.CharField(max_length=250)
-    confirmed_indian_national = models.IntegerField()
-    confirmed_foreign_national = models.IntegerField()
+    confirmed_indian_national = models.CharField(max_length=100)
+    confirmed_foreign_national = models.CharField(max_length=100)
     cured = models.IntegerField()
     deaths = models.IntegerField()
     confirmed = models.IntegerField()
+
+    def __str__(self):
+        return f"{self.date} - {self.state}"
 
 
 class StateWiseTesting(models.Model):
@@ -23,6 +26,9 @@ class StateWiseTesting(models.Model):
     total_samples = models.IntegerField()
     negatives = models.IntegerField()
     positives = models.IntegerField()
+
+    def __str__(self):
+        return f"{self.date} - {self.state}"
 
 
 class StateWiseTestingDetails(models.Model):
@@ -48,3 +54,6 @@ class StateWiseTestingDetails(models.Model):
     age_range_45_60 = models.IntegerField()
     age_range_gt_60 = models.IntegerField()
     total_individuals_vaccinated = models.IntegerField()
+
+    def __str__(self):
+        return f"{self.date} - {self.state}"
