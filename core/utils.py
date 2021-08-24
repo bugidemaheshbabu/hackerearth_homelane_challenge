@@ -106,3 +106,20 @@ def get_pinpoint_state_information(state_name, date):
     state_info["state_wise_covid_details"] = get_state_wise_covid_details(state_wise_covid_details_qs)
     state_info["state_wise_vaccine_details"] = get_state_wise_vaccine_details(state_wise_vaccine_details_qs)
     return state_info
+
+
+def get_all_states_information(states_list):
+    print(type(states_list))
+    all_states_info = {
+        "state_wise_testings": [],
+        "state_wise_covid_details": [],
+        "state_wise_vaccine_details": []
+    }
+    all_states_testings_qs = StateWiseTesting.objects.filter(state__in=states_list)
+    print(all_states_testings_qs)
+    all_states_covid_details_qs = StateWiseCovidDetails.objects.filter(state__in=states_list)
+    all_states_vaccine_details_qs = StateWiseTestingDetails.objects.filter(state__in=states_list)
+    all_states_info["state_wise_testings"] = get_state_wise_testings(all_states_testings_qs)
+    all_states_info["state_wise_covid_details"] = get_state_wise_covid_details(all_states_covid_details_qs)
+    all_states_info["state_wise_vaccine_details"] = get_state_wise_vaccine_details(all_states_vaccine_details_qs)
+    return all_states_info
